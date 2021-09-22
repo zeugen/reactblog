@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Photo(props) {
   const post = props.post;
+  console.log(props);
   return (
     <figure className="figure">
       <img className="photo" src={post.imageLink} alt={post.description} />
@@ -21,5 +23,10 @@ function Photo(props) {
     </figure>
   );
 }
+
+Photo.propTypes = {
+  post: PropTypes.object.isRequired,
+  onRemovePhoto: PropTypes.func.isRequired,
+};
 
 export default Photo;

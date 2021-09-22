@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Title from "./Title";
 import Photowall from "./Photowall";
+import PropTypes from "prop-types";
 
 class Main extends Component {
   constructor(props) {
