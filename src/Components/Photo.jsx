@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Photo(props) {
   const post = props.post;
-  console.log(props);
+
   return (
     <figure className="figure">
       <img className="photo" src={post.imageLink} alt={post.description} />
@@ -12,7 +12,6 @@ function Photo(props) {
       </figcaption>
       <div className="button-container">
         <button
-          className="remove-button"
           onClick={() => {
             props.onRemovePhoto(post);
           }}
